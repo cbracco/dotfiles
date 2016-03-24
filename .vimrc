@@ -8,6 +8,7 @@
 " Syntax Highlighting
 "
 syntax on                  " Enable syntax highlighting
+set background=dark        " Set dark background mode
 colorscheme material-theme " Set color scheme
 
 "
