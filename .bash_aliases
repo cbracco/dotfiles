@@ -71,3 +71,8 @@ alias sudo='sudo '
 
 # Remove git from a project
 alias ungit="find . -name '.git' -exec rm -rf {} \;"
+
+# Make a directory and change into it at the same time
+md () { 
+  mkdir -p "$@" && cd "$@";
+}
