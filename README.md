@@ -11,17 +11,17 @@ dotfiles is a project by [@cbracco][cbracco] and its [contributors][contributors
 
 - [dotfiles][dotfiles-mathiasbynens] by [@mathiasbynens][mathiasbynens]
 - [dotfiles][dotfiles-geerlingguy] by [@geerlingguy][geerlingguy]
-- [materialshell][materialshell] by [@carloscuesta][carloscuesta]
+- [Monokai Pro][monokaipro-terminal] by [@Monokai][monokai]
 - [vim-material-theme][vim-material-theme] by [@jdkanani][jdkanani]
 
-[carloscuesta]: https://github.com/carloscuesta
-[cbracco]: http://cbracco.me
+[cbracco]: http://chrisbracco.com
 [contributors]: https://github.com/cbracco/provision-localhost/graphs/contributors
 [dotfiles-geerlingguy]: https://github.com/geerlingguy/dotfiles
 [dotfiles-mathiasbynens]: https://github.com/mathiasbynens/dotfiles
 [geerlingguy]: https://github.com/geerlingguy
 [issac-newton-quote]: https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants
 [jdkanani]: https://github.com/jdkanani
-[materialshell]: https://github.com/carloscuesta/materialshell
+[monokai]: https://github.com/monokai
+[monokaipro-terminal]: https://github.com/Monokai/monokai-pro-sublime-text/issues/45#issuecomment-341005595
 [mathiasbynens]: https://github.com/mathiasbynens
 [vim-material-theme]: https://github.com/jdkanani/vim-material-theme
