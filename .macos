@@ -22,6 +22,9 @@ sudo scutil --set HostName "CAB-2018-MBP"
 sudo scutil --set LocalHostName "CAB-2018-MBP"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "CAB-2018-MBP"
 
+# Set login window message
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "If found please return this machine to Chris Bracco - (201) 953-3928 - chris@cbracco.me"
+
 # Set standby delay to 24 hours (default is 1 hour)
 # sudo pmset -a standbydelay 86400
 
