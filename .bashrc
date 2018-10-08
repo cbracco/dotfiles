@@ -26,9 +26,7 @@ then
 fi
 
 # Execute bash_completion (if it exists)
-if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
-    . $(brew --prefix)/share/bash-completion/bash_completion
-fi
+[ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
 # Set the default editor
 export EDITOR="vim"
