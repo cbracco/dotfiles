@@ -134,7 +134,11 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 ###############################################################################
 
 # Disable hibernation (speeds up entering sleep mode)
-sudo pmset -a hibernatemode 0
+# sudo pmset -a hibernatemode 0
+
+# Turn on hibernation mode so no power is consumed when sleeping
+# (5 when FileVault is enabled, 1 when disabled)
+sudo pmset -a hibernatemode 5
 
 # Remove the sleep image file to save disk space
 sudo rm /private/var/vm/sleepimage
