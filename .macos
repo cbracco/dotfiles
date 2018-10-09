@@ -129,6 +129,11 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 #sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
 #sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
 
+# Enable application firewall
+# https://support.apple.com/en-us/HT201642
+sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+sudo launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.plist 2>/dev/null
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
