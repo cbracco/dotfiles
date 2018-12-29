@@ -28,6 +28,18 @@ set shiftwidth=2           " 2 spaces for indentation
 filetype on                " Enable filetype detection
 
 "
+" Plugins (using vim-plug)
+"
+Plug 'itchyny/lightline.vim'
+Plug 'drewtempelmeyer/palenight.vim'
+
+"
+" Set lightline color scheme
+" https://github.com/drewtempelmeyer/palenight.vim#usage
+"
+let g:lightline.colorscheme = 'palenight'
+
+"
 " Enable italics
 " https://github.com/drewtempelmeyer/palenight.vim#italics
 "
