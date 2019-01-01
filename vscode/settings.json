@@ -9,6 +9,7 @@
 		80
     ],
     "editor.scrollBeyondLastLine": false,
+    "editor.snippetSuggestions": "top",
     "editor.wordWrap": "on",
     "emmet.includeLanguages": {"django-html": "html"},
     "emmet.triggerExpansionOnTab": true,
