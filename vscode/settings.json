@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "Roboto Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "Roboto Mono",
     "editor.fontSize": 14,
     "editor.fontWeight": "400",
     "editor.lineHeight": 22,
@@ -11,8 +11,16 @@
     "editor.scrollBeyondLastLine": false,
     "editor.snippetSuggestions": "top",
     "editor.wordWrap": "on",
-    "emmet.includeLanguages": {"django-html": "html"},
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
     "emmet.triggerExpansionOnTab": true,
+    "files.associations": {
+        "**/*.html": "html",
+        "**/templates/**/*.html": "django-html",
+        "**/templates/**/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
@@ -29,4 +37,5 @@
     "workbench.statusBar.feedback.visible": false,
     "workbench.colorTheme": "Material Theme Palenight High Contrast",
     "window.zoomLevel": 0,
+    "explorer.confirmDragAndDrop": false,
 }
