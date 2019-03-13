@@ -8,4 +8,4 @@
 #
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export WORKON_HOME=${HOME}/virtualenvs
+export WORKON_HOME=${HOME}/Development/virtualenvs
