@@ -15,6 +15,7 @@
         "django-html": "html"
     },
     "emmet.triggerExpansionOnTab": true,
+    "explorer.confirmDragAndDrop": true,
     "files.associations": {
         "**/*.html": "html",
         "**/templates/**/*.html": "django-html",
@@ -31,11 +32,11 @@
         "**/node_modules": true,
         "**/tmp": true
     },
-    "terminal.integrated.fontSize": 14,"terminal.integrated.lineHeight": 1.2,
-    "workbench.iconTheme": "eq-material-theme-icons-palenight",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.2,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Material Theme Palenight High Contrast",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "welcomePage",
     "workbench.statusBar.feedback.visible": false,
-    "workbench.colorTheme": "Material Theme Palenight High Contrast",
-    "window.zoomLevel": 0,
-    "explorer.confirmDragAndDrop": false,
 }
