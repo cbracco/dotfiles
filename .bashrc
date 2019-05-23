@@ -7,9 +7,6 @@
 # command prompt, EDITOR variable, bash aliases, etc.
 #
 
-# Load nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 # Load rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
