@@ -39,4 +39,5 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "welcomePage",
     "workbench.statusBar.feedback.visible": false,
+    "workbench.tree.renderIndentGuides": "always",
 }
