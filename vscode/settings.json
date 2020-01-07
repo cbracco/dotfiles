@@ -1,4 +1,5 @@
 {
+    "breadcrumbs.enabled": true,
     "editor.fontFamily": "Roboto Mono",
     "editor.fontSize": 14,
     "editor.fontWeight": "400",
@@ -38,6 +39,5 @@
     "workbench.colorTheme": "Material Theme Palenight High Contrast",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "welcomePage",
-    "workbench.statusBar.feedback.visible": false,
     "workbench.tree.renderIndentGuides": "always",
 }
