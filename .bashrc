@@ -10,11 +10,14 @@
 # Load rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# Source virtualenvwrapper (if it exists)
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]
-then
-  source /usr/local/bin/virtualenvwrapper.sh
+# Initialize pyenv
+if pyenv which virtualenvwrapper_lazy.sh >/dev/null 2>&1; then
+    . "$(pyenv which virtualenvwrapper_lazy.sh)"
 fi
+eval "$(pyenv init -)"
+
+# Initialize virtualenvwrapper
+pyenv virtualenvwrapper_lazy
 
 # Source bash aliases (if it exists)
 if [ -f ~/.bash_aliases ]
@@ -97,3 +100,8 @@ function parse_git_dirty {
 
 # Set prompt format
 export PS1="\[\e[1;35m\]\u\[\e[m\] at \[\e[1;34m\]\h\[\e[m\] in \[\e[1;32m\]\w\[\e[m\] on \[\e[1;33m\]\`parse_git_branch\`\[\e[m\]\n$ "
+
+# Initialize nvm and nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
