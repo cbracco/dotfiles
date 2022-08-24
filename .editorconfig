@@ -1,5 +1,8 @@
-# For more information about the properties used in
-# this file, please refer toc editorconfig.org
+# 
+# Editorconfig
+# Maintain consistent coding styles across projects
+# https://editorconfig.org
+# 
 
 root = true
 

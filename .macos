@@ -17,10 +17,10 @@ osascript -e 'tell application "System Preferences" to quit'
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "CAB-2018-MBP"
-sudo scutil --set HostName "CAB-2018-MBP"
-sudo scutil --set LocalHostName "CAB-2018-MBP"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "CAB-2018-MBP"
+sudo scutil --set ComputerName "CAB-2021-MBP"
+sudo scutil --set HostName "CAB-2021-MBP"
+sudo scutil --set LocalHostName "CAB-2021-MBP"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "CAB-2021-MBP"
 
 # Set login window message
 sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "If found please return this machine to Chris Bracco - (201) 953-3928 - chris@cbracco.me"
