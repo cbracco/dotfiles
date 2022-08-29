@@ -4,33 +4,53 @@
 # .zshrc
 #
 # Sets the environment for interactive shells. Loaded after .zprofile.
-# Includes anything you want in both login and interactive shells, 
+# Includes anything you want in both login and interactive shells,
 # such as a custom command prompt, $PATH, $EDITOR, aliases, etc.
 #
 
-# 
+#
 # Version managers
-# 
+#
 
 # pyenv
 if command -v pyenv &> /dev/null; then
     eval "$(pyenv init --path)"
-    eval "$(pyenv init -)" 
+    eval "$(pyenv init -)"
 fi
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # rbenv
-if command -v rbenv &> /dev/null; then 
+if command -v rbenv &> /dev/null; then
     eval "$(rbenv init -)"
 fi
 
-# 
+#
 # Shell customizations
-# 
+#
 
 # Set the default editor
 export EDITOR="vim"
 
+# Enable zsh completions
+autoload -Uz compinit && compinit
+
+# Case-insensitive path completions
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
+
 # Better zsh history
+# Up/Down arrow search
+# https://superuser.com/a/585004
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
+
 # For more info, run `man zshparam`
 export HISTFILE=~/.zsh_history
 export HISTSIZE=1000000   # the number of items for the internal history list
@@ -43,9 +63,9 @@ setopt HIST_REDUCE_BLANKS       # remove unnecessary blanks
 setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
 setopt EXTENDED_HISTORY         # record command start time
 
-# 
+#
 # Prompt customizations
-# 
+#
 # git-prompt.zsh -- a lightweight git prompt for zsh.
 # Copyright © 2019 Wolfgang Popp
 #
@@ -66,7 +86,7 @@ setopt EXTENDED_HISTORY         # record command start time
 # DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 # TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
 # OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-# 
+#
 
 autoload -U colors && colors
 
@@ -445,9 +465,9 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}✔"
 PROMPT='%B%~%b %F{blue}≻≻≻%f '
 RPROMPT='$(gitprompt)'
 
-# 
+#
 # Aliases
-# 
+#
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -512,6 +532,6 @@ alias sudo='sudo '
 alias ungit="find . -name '.git' -exec rm -rf {} \;"
 
 # Make a directory and change into it at the same time
-md () { 
+md () {
     mkdir -p "$@" && cd "$@";
 }
