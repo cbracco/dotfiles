@@ -9,8 +9,11 @@
 #
 
 #
-# Version managers
+# Managers
 #
+
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # pyenv
 if command -v pyenv &> /dev/null; then
