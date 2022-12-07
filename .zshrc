@@ -14,6 +14,7 @@
 
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # pyenv
 if command -v pyenv &> /dev/null; then
